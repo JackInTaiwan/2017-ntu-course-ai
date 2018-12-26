@@ -1,0 +1,45 @@
+offset = 4
+Performance on validation set for k=0.001000: (84.0%)
+Performance on validation set for k=0.010000: (83.0%)
+Performance on validation set for k=0.050000: (82.0%)
+Performance on validation set for k=0.100000: (81.0%)
+Performance on validation set for k=0.500000: (80.0%)
+Performance on validation set for k=1.000000: (80.0%)
+Performance on validation set for k=5.000000: (79.0%)
+Performance on validation set for k=10.000000: (81.0%)
+Performance on validation set for k=20.000000: (78.0%)
+Performance on validation set for k=50.000000: (68.0%)
+Validating...
+84 correct out of 100 (84.0%).
+Testing...
+81 correct out of 100 (81.0%).
+
+6 best
+
+
+    mode = None
+    if abs(count_1 - count_2) < 5 and abs(count_1 - count_3) and abs(count_2 - count_3) : mode = "equal"
+    else :
+        pairs = [("1", count_1), ("2", count_2), ("3", count_3)]
+        pairs = sorted(pairs, key=lambda x: x[1])
+        mode = pairs[2][0]
+    features["upper largest"] = 1 if mode == "1" else 0
+    features["center largest"] = 1 if mode == "2" else 0
+    features["lower largest"] = 1 if mode == "3" else 0
+    features["equal large"] = 1 if mode == "equal" else 0
+
+original
+798 correct out of 1000 (79.8%).
+Testing...
+828 correct out of 1000 (82.8%).
+
+4x4_foods
+829 correct out of 1000 (82.9%).
+Testing...
+846 correct out of 1000 (84.6%).
+
+3x3_ghost
+833 correct out of 1000 (83.3%).
+Testing...
+853 correct out of 1000 (85.3%).
+

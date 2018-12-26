@@ -1,0 +1,1 @@
+python3.5 predict.py ml_38_1.pkl $1 $2
